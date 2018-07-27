@@ -188,9 +188,13 @@ const AboutPage = ({ data }) => {
   );
 };
 
-// AboutPage.propTypes = {
-//   data: PropTypes.object.isRequired
-// };
+AboutPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
 export default AboutPage;
 
