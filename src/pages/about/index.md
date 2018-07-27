@@ -20,6 +20,11 @@ hero:
     HomeHero was named the #1 Employment Website at the 2014 Webby Awards and both its founders were named to Forbes “30 Under 30” list in Healthcare in 2016.
 section1: 
   heading: Company History
+  content: >
+    Founders Mike Townsend and Kyle Hill watched for many years the struggles their parents went through finding, hiring and managing caregivers for their aging grandparents.
+    Kyle's father, Anthony Hill, has been the primary caregiver for Kyle's grandmother for over a decade, while also teaching full-time as a theatre professor at The Ohio State University. In 2012, after a caregiver left his mother home alone and neglected for a full day, Anthony took an extended leave of absence so he could fix his catastrophic home care situation.
+    These events were so disruptive that in 2013 Kyle decided to start a home care business with his long-time friend and business partner, Mike Townsend, to make home care more accessible, transparent and affordable for everyone. What started as a simple scheduling and payment app for Kyle's family has evolved into a robust home care platform that is fundamentally changing the healthcare industry. At 99-years old, Kyle's grandmother is HomeHero's longest-standing client.
+    Today, HomeHero's mission is to promote health and wellness in the home, and help the 120 million other Americans, like Kyle's father, who are caring for a sick or elderly family member at home.
   image: 
     image: /img/about/about-founders.jpg
     alt: founders
@@ -29,11 +34,3 @@ section1:
     name: Kyle Hill
     title: CEO, HomeHero
 ---
-
-Founders Mike Townsend and Kyle Hill watched for many years the struggles their parents went through finding, hiring and managing caregivers for their aging grandparents.
-
-Kyle's father, Anthony Hill, has been the primary caregiver for Kyle's grandmother for over a decade, while also teaching full-time as a theatre professor at The Ohio State University. In 2012, after a caregiver left his mother home alone and neglected for a full day, Anthony took an extended leave of absence so he could fix his catastrophic home care situation.
-
-These events were so disruptive that in 2013 Kyle decided to start a home care business with his long-time friend and business partner, Mike Townsend, to make home care more accessible, transparent and affordable for everyone. What started as a simple scheduling and payment app for Kyle's family has evolved into a robust home care platform that is fundamentally changing the healthcare industry. At 99-years old, Kyle's grandmother is HomeHero's longest-standing client.
-
-Today, HomeHero's mission is to promote health and wellness in the home, and help the 120 million other Americans, like Kyle's father, who are caring for a sick or elderly family member at home.
