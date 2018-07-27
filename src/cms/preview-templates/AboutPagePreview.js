@@ -4,28 +4,28 @@ import { AboutPageTemplate } from "../../templates/about-page";
 
 const AboutPagePreview = ({ entry, widgetFor, getAsset }) => (
   <AboutPageTemplate
-    title={entry.getIn(["data", "title"])}
-    intro={{
+    hero={{
+      title: entry.getIn(["data", "hero", "title"])
       image: {
-        image: getAsset(entry.getIn(["data", "intro", "image", "image"])),
-        alt: entry.getIn(["data", "intro", "image", "alt"])
+        image: getAsset(entry.getIn(["data", "hero", "image", "image"])),
+        alt: entry.getIn(["data", "hero", "image", "alt"])
       },
-      blurb1: entry.getIn(["data", "intro", "blurb1"]),
-      blurb2: entry.getIn(["data", "intro", "blurb2"]),
-      blurb3: entry.getIn(["data", "intro", "blurb3"]),
-      blurb4: entry.getIn(["data", "intro", "blurb4"])
+      paragraph1: entry.getIn(["data", "hero", "paragraph1"]),
+      paragraph2: entry.getIn(["data", "hero", "paragraph2"]),
+      paragraph3: entry.getIn(["data", "hero", "paragraph3"]),
+      paragraph4: entry.getIn(["data", "hero", "paragraph4"])
     }}
-    main={{
-      heading: entry.getIn(["data", "main", "heading"]),
+    section1={{
+      heading: entry.getIn(["data", "section1", "heading"]),
       image: {
-        image: getAsset(entry.getIn(["data", "main", "image", "image"])),
-        alt: entry.getIn(["data", "main", "image", "alt"])
+        image: getAsset(entry.getIn(["data", "section1", "image", "image"])),
+        alt: entry.getIn(["data", "section1", "image", "alt"])
       },
-      description: entry.getIn(["data", "main", "description"]),
+      content: entry.getIn(["data", "section1", "content"]),
       quote: {
-        quote: entry.getIn(["data", "main", "quote", "quote"]),
-        name: entry.getIn(["data", "main", "quote", "name"]),
-        title: entry.getIn(["data", "main", "quote", "title"])
+        quote: entry.getIn(["data", "section1", "quote", "quote"]),
+        name: entry.getIn(["data", "section1", "quote", "name"]),
+        title: entry.getIn(["data", "section1", "quote", "title"])
       }
     }}
   />

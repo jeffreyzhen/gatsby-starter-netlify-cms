@@ -27,9 +27,8 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Blurb1, name: blurb1, widget: string}, {label: Blurb2, name: blurb2, widget: string}, {label: Blurb3, name: blurb3, widget: string}, {label: Image, name: image, widget: object, fields:[{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Quote, name: quote, widget: object, fields:[{label: Quote, name: quote, widget: string},{label: Name, name: name, widget: string},{label: Title, name: title, widget: string}]},{label: Image, name: Image, widget: image, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Hero, name: hero, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Paragraph 1, name: paragraph1, widget: string}, {label: Paragraph 2, name: paragraph2, widget: string}, {label: Paragraph 3, name: paragraph3, widget: string}, {label: Paragraph 4, name: paragraph4, widget: string}, {label: Image, name: image, widget: object, fields:[{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Section 1, name: section1, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Content, name: content, widget: text}, {label: Image, name: image, widget: image, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Quote, name: quote, widget: object, fields:[{label: Quote, name: quote, widget: string}, {label: Name, name: name, widget: string}, {label: Title, name: title, widget: string}]}]}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

@@ -1,39 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
-import introMedium from "../../static/images/about-intro-bg-md.jpg";
-import introLarge from "../../static/images/about-intro-bg-lg.jpg";
-import foundersSmall from "../../static/images/about-founders-sm.jpg";
-import founders from "../../static/images/about-founders.jpg";
 import kyle from "../../static/images/kyle-thumb.jpg";
 import cta from "../../static/images/about-ctas-user-pic.png";
 import hiring from "../../static/images/about-ctas-hiring-pic.png";
 
 import "../layouts/css/about.css";
 
-export const AboutPageTemplate = ({ title, intro, main }) => {
+export const AboutPageTemplate = ({ hero, section1 }) => {
   return (
     <div id="wrapper" className="about clear-header" style={{ opacity: 1 }}>
       <section className="hero-wrapper">
         <figure className="fig-wrapper">
           <div className="img-wrapper">
             <picture>
-              {/* <source media="(max-width: 991px)" srcSet={introMedium} />
-              <source media="(max-width: 992px)" srcSet={introLarge} /> */}
               <img
                 className="hero-thumbnail"
-                src={intro.image.image}
-                alt={intro.image.alt}
+                src={hero.image.image}
+                alt={hero.image.alt}
               />
             </picture>
           </div>
           <div className="overlay" />
           <div className="container desc-wrapper">
-            <h1 className="page-header">{title}</h1>
-            <p>{intro.blurb1}</p>
-            <p>{intro.blurb2}</p>
-            <p>{intro.blurb3}</p>
-            <p>{intro.blurb4}</p>
+            <h1 className="page-header">{hero.title}</h1>
+            <p>{hero.paragraph1}</p>
+            <p>{hero.paragraph2}</p>
+            <p>{hero.paragraph3}</p>
+            <p>{hero.paragraph4}</p>
           </div>
         </figure>
       </section>
@@ -41,28 +35,26 @@ export const AboutPageTemplate = ({ title, intro, main }) => {
       <section className="page-section">
         <div className="container">
           <h2 className="section-header">
-            <span>{main.heading}</span>
+            <span>{section1.heading}</span>
           </h2>
           <div className="section-content">
             <div className="col-sm-6 no-padding-mobile no-padding-left img-wrapper">
               <picture>
-                {/* <source media="(max-width: 767px)" srcSet={foundersSmall} />
-                <source media="(min-width: 768px)" srcSet={founders} /> */}
                 <img
                   className="rd-corner"
-                  src={main.image.image}
-                  alt={main.image.alt}
+                  src={section1.image.image}
+                  alt={section1.image.alt}
                 />
               </picture>
             </div>
             <div className="col-sm-6 no-padding-mobile no-padding-right align-right">
-              {main.description}
+              {section1.content}
             </div>
             <div className="col-sm-6 col-lg-12">
               <blockquote>
-                {main.quote.quote}
+                {section1.quote.quote}
                 <footer>
-                  {main.quote.name} <span>{main.quote.title}</span>
+                  {section1.quote.name} <span>{section1.quote.title}</span>
                 </footer>
               </blockquote>
             </div>
@@ -170,21 +162,17 @@ export const AboutPageTemplate = ({ title, intro, main }) => {
   );
 };
 
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func
-};
+// AboutPageTemplate.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   content: PropTypes.string,
+//   contentComponent: PropTypes.func
+// };
 
 const AboutPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <AboutPageTemplate
-      title={frontmatter.title}
-      intro={frontmatter.intro}
-      main={frontmatter.main}
-    />
+    <AboutPageTemplate intro={frontmatter.hero} main={frontmatter.section1} />
   );
 };
 
@@ -202,24 +190,24 @@ export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        intro {
+        hero {
+          title
           image {
             image
             alt
           }
-          blurb1
-          blurb2
-          blurb3
-          blurb4
+          paragraph1
+          paragraph2
+          paragraph3
+          paragraph4
         }
-        main {
+        section1 {
           heading
           image {
             image
             alt
           }
-          description
+          content
           quote {
             quote
             name
