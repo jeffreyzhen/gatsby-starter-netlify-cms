@@ -11,44 +11,29 @@ import hiring from "../../static/images/about-ctas-hiring-pic.png";
 
 import "../layouts/css/about.css";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
-
+export const AboutPageTemplate = ({ title, intro, main }) => {
   return (
     <div id="wrapper" className="about clear-header" style={{ opacity: 1 }}>
       <section className="hero-wrapper">
         <figure className="fig-wrapper">
           <div className="img-wrapper">
             <picture>
-              <source media="(max-width: 991px)" srcSet={introMedium} />
-              <source media="(max-width: 992px)" srcSet={introLarge} />
-              <img className="hero-thumbnail" src={introLarge} alt="HomeHero" />
+              {/* <source media="(max-width: 991px)" srcSet={introMedium} />
+              <source media="(max-width: 992px)" srcSet={introLarge} /> */}
+              <img
+                className="hero-thumbnail"
+                src={intro.image.image}
+                alt={intro.image.alt}
+              />
             </picture>
           </div>
           <div className="overlay" />
           <div className="container desc-wrapper">
-            <h1 className="page-header">About Us</h1>
-            <p>
-              HomeHero is a licensed non-medical home care provider that
-              leverages smart technology and human compassion to extend the
-              health system into the home.
-            </p>
-            <p>
-              We cater to individual families seeking assistance in the home and
-              we empower health systems to launch, operate and grow their own
-              branded non-medical home care programs.
-            </p>
-            <p>
-              With hundreds of bonded and insured “Heroes”, HomeHero has become
-              one of the largest and most trusted home care providers in
-              California, having provided more than 1 million hours of care to
-              thousands of families.
-            </p>
-            <p>
-              HomeHero was named the #1 Employment Website at the 2014 Webby
-              Awards and both its founders were named to Forbes “30 Under 30”
-              list in Healthcare in 2016.
-            </p>
+            <h1 className="page-header">{title}</h1>
+            <p>{intro.blurb1}</p>
+            <p>{intro.blurb2}</p>
+            <p>{intro.blurb3}</p>
+            <p>{intro.blurb4}</p>
           </div>
         </figure>
       </section>
@@ -56,77 +41,28 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <section className="page-section">
         <div className="container">
           <h2 className="section-header">
-            <span>Company History</span>
+            <span>{main.heading}</span>
           </h2>
           <div className="section-content">
             <div className="col-sm-6 no-padding-mobile no-padding-left img-wrapper">
               <picture>
-                <source media="(max-width: 767px)" srcSet={foundersSmall} />
-                <source media="(min-width: 768px)" srcSet={founders} />
-                <img className="rd-corner" src={founders} alt="" />
+                {/* <source media="(max-width: 767px)" srcSet={foundersSmall} />
+                <source media="(min-width: 768px)" srcSet={founders} /> */}
+                <img
+                  className="rd-corner"
+                  src={main.image.image}
+                  alt={main.image.alt}
+                />
               </picture>
             </div>
             <div className="col-sm-6 no-padding-mobile no-padding-right align-right">
-              <p>
-                Founders{" "}
-                <a
-                  href="https://twitter.com/mikettownsend"
-                  alt="Mike Townsend"
-                  target="_blank"
-                >
-                  Mike Townsend
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://twitter.com/kaleazy"
-                  alt="Kyle Hill"
-                  target="_blank"
-                >
-                  Kyle Hill
-                </a>{" "}
-                watched for many years the struggles their parents went through
-                finding, hiring and managing caregivers for their aging
-                grandparents.
-              </p>
-              <p>
-                Kyle's father,{" "}
-                <a
-                  href="http://anthonyhill.org/"
-                  alt="Anthony Hill"
-                  target="_blank"
-                >
-                  Anthony Hill
-                </a>, has been the primary caregiver for Kyle's grandmother for
-                over a decade, while also teaching full-time as a theatre
-                professor at The Ohio State University. In 2012, after a
-                caregiver left his mother home alone and neglected for a full
-                day, Anthony took an extended leave of absence so he could fix
-                his catastrophic home care situation.
-              </p>
-              <p>
-                These events were so disruptive that in 2013 Kyle decided to
-                start a home care business with his long-time friend and
-                business partner, Mike Townsend, to make home care more
-                accessible, transparent and affordable for everyone. What
-                started as a simple scheduling and payment app for Kyle's family
-                has evolved into a robust home care platform that is
-                fundamentally changing the healthcare industry. At 99-years old,
-                Kyle's grandmother is HomeHero's longest-standing client.
-              </p>
-              <p>
-                Today, HomeHero's mission is to promote health and wellness in
-                the home, and help the 120 million other Americans, like Kyle's
-                father, who are caring for a sick or elderly family member at
-                home.
-              </p>
+              {main.description}
             </div>
             <div className="col-sm-6 col-lg-12">
               <blockquote>
-                The scariest thing for any family is that your loved one is left
-                home alone. This is something many families deal with and it's
-                not the way home care should be.
+                {main.quote.quote}
                 <footer>
-                  Kyle Hill <span>CEO, HomeHero</span>
+                  {main.quote.name} <span>{main.quote.title}</span>
                 </footer>
               </blockquote>
             </div>
@@ -241,29 +177,51 @@ AboutPageTemplate.propTypes = {
 };
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <AboutPageTemplate
-      contentComponent={HTMLContent}
-      title={post.frontmatter.title}
-      content={post.html}
+      title={frontmatter.title}
+      intro={frontmatter.intro}
+      main={frontmatter.main}
     />
   );
 };
 
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired
-};
+// AboutPage.propTypes = {
+//   data: PropTypes.object.isRequired
+// };
 
 export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
+        intro {
+          image {
+            image
+            alt
+          }
+          blurb1
+          blurb2
+          blurb3
+          blurb4
+        }
+        main {
+          heading
+          image {
+            image
+            alt
+          }
+          description
+          quote {
+            quote
+            name
+            title
+          }
+        }
       }
     }
   }
