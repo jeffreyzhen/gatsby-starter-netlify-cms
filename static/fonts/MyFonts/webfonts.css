@@ -1,0 +1,40 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2884760, 2014-09-16T21:04:31-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: MuseoSlab-100 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/100/
+ *
+ * Webfont: MuseoSlab-700 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/700/
+ *
+ * Webfont: MuseoSlab-300 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/300/
+ *
+ * Webfont: MuseoSlab-500 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/500/
+ *
+ * Webfont: MuseoSlab-300Italic by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/300-italic/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2884760
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
+ *
+ * © 2014 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2c0498");
+@font-face {font-family: 'MuseoSlab-100';src: url('../fonts/MyFonts/webfonts/2C0498_0_0.eot');src: url('../fonts/MyFonts/webfonts/2C0498_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/MyFonts/webfonts/2C0498_0_0.woff') format('woff'),url('../fonts/MyFonts/webfonts/2C0498_0_0.ttf') format('truetype'),url('../fonts/MyFonts/webfonts/2C0498_0_0.svg#wf') format('svg');}
+@font-face {font-family: 'MuseoSlab-700';src: url('../fonts/MyFonts/webfonts/2C0498_1_0.eot');src: url('../fonts/MyFonts/webfonts/2C0498_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/MyFonts/webfonts/2C0498_1_0.woff') format('woff'),url('../fonts/MyFonts/webfonts/2C0498_1_0.ttf') format('truetype'),url('../fonts/MyFonts/webfonts/2C0498_1_0.svg#wf') format('svg');}
+@font-face {font-family: 'MuseoSlab-300';src: url('../fonts/MyFonts/webfonts/2C0498_2_0.eot');src: url('../fonts/MyFonts/webfonts/2C0498_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/MyFonts/webfonts/2C0498_2_0.woff') format('woff'),url('../fonts/MyFonts/webfonts/2C0498_2_0.ttf') format('truetype'),url('../fonts/MyFonts/webfonts/2C0498_2_0.svg#wf') format('svg');}
+@font-face {font-family: 'MuseoSlab-500';src: url('../fonts/MyFonts/webfonts/2C0498_3_0.eot');src: url('../fonts/MyFonts/webfonts/2C0498_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/MyFonts/webfonts/2C0498_3_0.woff') format('woff'),url('../fonts/MyFonts/webfonts/2C0498_3_0.ttf') format('truetype'),url('../fonts/MyFonts/webfonts/2C0498_3_0.svg#wf') format('svg');}
+@font-face {font-family: 'MuseoSlab-300Italic';src: url('../fonts/MyFonts/webfonts/2C0498_4_0.eot');src: url('../fonts/MyFonts/webfonts/2C0498_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/MyFonts/webfonts/2C0498_4_0.woff') format('woff'),url('../fonts/MyFonts/webfonts/2C0498_4_0.ttf') format('truetype'),url('../fonts/MyFonts/webfonts/2C0498_4_0.svg#wf') format('svg');}
