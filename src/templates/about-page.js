@@ -135,14 +135,7 @@ export const AboutPageTemplate = ({ hero, section1 }) => {
         </div>
       </section>
 
-      <section
-        className="page-section about-us-ctas"
-        style={{
-          backgroundImage: "",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center"
-        }}
-      >
+      <section className="page-section about-us-ctas">
         <div className="container about-us-ctas-container">
           <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <div className="about-us-ctas-icon-holder">

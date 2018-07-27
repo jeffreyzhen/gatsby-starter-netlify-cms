@@ -1,7 +1,4 @@
 import React from "react";
-// import svgLoader from '../assets/utils/svgLoader';
-// import logo from '../assets/img/logos/homehero/logo.png';
-// const logo = svgLoader[`./logo.svg`];
 
 const Footer = () => (
   <footer id="footer">
@@ -15,7 +12,7 @@ const Footer = () => (
     <div className="container footer-cta-container">
       <div className="footer-cta-wrapper">
         <a href="/" className="hh-logo-wrapper icon-part">
-          <div>{/* <img src={logo} alt="logo" /> */}</div>
+          {/* <img src={logo} alt="logo" /> */}
         </a>
         <p>HomeHero is the #1 home care provider in California</p>
       </div>
