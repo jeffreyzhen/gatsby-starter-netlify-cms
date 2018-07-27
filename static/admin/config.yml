@@ -28,7 +28,8 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurb1, name: blurb1, widget: string}, {label: Blurb2, name: blurb2, widget: string}, {label: Blurb3, name: blurb3, widget: string}, {label: Image, name: image, widget: object, fields:[{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Quote, name: quote, widget: object, fields:[{label: Quote, name: quote, widget: string},{label: Name, name: name, widget: string},{label: Title, name: title, widget: string}]},{label: Image, name: Image, widget: image, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
