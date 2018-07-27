@@ -21,7 +21,7 @@ const AboutPagePreview = ({ entry, widgetFor, getAsset }) => (
         image: getAsset(entry.getIn(["data", "section1", "image", "image"])),
         alt: entry.getIn(["data", "section1", "image", "alt"])
       },
-      content: widgetFor("body"),
+      content: entry.getIn(["data", "section1", "content"]),
       quote: {
         quote: entry.getIn(["data", "section1", "quote", "quote"]),
         name: entry.getIn(["data", "section1", "quote", "name"]),
