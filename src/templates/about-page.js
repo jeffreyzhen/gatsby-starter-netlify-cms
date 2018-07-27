@@ -4,6 +4,7 @@ import Content, { HTMLContent } from "../components/Content";
 import kyle from "../../static/images/kyle-thumb.jpg";
 import cta from "../../static/images/about-ctas-user-pic.png";
 import hiring from "../../static/images/about-ctas-hiring-pic.png";
+import backgroundCta from "../../static/images/about-ctas-bg.jpg";
 
 import "../layouts/css/about.css";
 
@@ -134,7 +135,14 @@ export const AboutPageTemplate = ({ hero, section1 }) => {
         </div>
       </section>
 
-      <section className="page-section about-us-ctas">
+      <section
+        className="page-section about-us-ctas"
+        style={{
+          backgroundImage: "",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center"
+        }}
+      >
         <div className="container about-us-ctas-container">
           <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <div className="about-us-ctas-icon-holder">
@@ -172,7 +180,10 @@ const AboutPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <AboutPageTemplate intro={frontmatter.hero} main={frontmatter.section1} />
+    <AboutPageTemplate
+      hero={frontmatter.hero}
+      section1={frontmatter.section1}
+    />
   );
 };
 

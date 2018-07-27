@@ -6917,7 +6917,7 @@ img.faq-arrow-closed.transform{
   height:330px;
   padding:0;
   border:none;
-  /* background:url(../img/about/about-ctas-bg.jpg) center no-repeat; */
+  background:url(../../img/about/about-ctas-bg.jpg) center no-repeat;
   background-size:cover
 }
 .about-us-ctas-container{
